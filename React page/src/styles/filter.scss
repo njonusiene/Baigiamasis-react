@@ -1,7 +1,11 @@
 .filter-options {
-    padding: 45px 205px;
+    padding: 45px 40px;
     font-weight: 700;
     font-size: 1.3em;
+    color: $red;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 
     label {
         padding: 3px;
@@ -11,10 +15,12 @@
         margin: 0px 10px;
         padding-top: 5px;
         font-family: $font;
-        font-size: 0.8em;
+        font-size: 0.7em;
+        color: $brown;
+        border: 1px solid $brown;
     }
 
-    @media (max-width:768px) {
+    @media (max-width:480px) {
         display: flex;
         flex-direction: column;
         margin: 20px;

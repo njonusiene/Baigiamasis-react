@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap');
+//Font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
-$orange: #0fa5af;
-$hoverOrange: #0fa4af84;
-$grey: #4c4c4c;
-$font: 'Oswald';
-$dark-grey: #464646;
-$blue: #0fa5af;
+$font: 'Poppins';
+$mainfont: 'Indie Flower', cursive;
+
+//Spalvos
+$green: #C3E2C2;
+$yellow: #EAECCC;
+$brown: #DBCC95;
+$red: #CD8D7A;

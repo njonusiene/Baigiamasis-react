@@ -1,0 +1,112 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient($brown, $yellow, $brown);
+    box-shadow: 0 5px 5px $green;
+    border-radius: 5px;
+    font-size: 1.5em;
+    width: 100%; 
+    
+    .title {
+        font-size: 1.5em;
+        margin: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: rgb(73, 72, 72);
+        position: sticky;
+        top: 0;
+        font-family: $mainfont;
+        color: $red;
+        text-shadow: 5px 5px $green;
+        padding-left: 25px;
+
+        #icon {
+            font-size: 1,3em;
+            transition: 0.5s;
+
+            &:hover {
+                color: $brown;
+                transform: translatey(10px);
+                cursor: pointer;
+            }
+        }
+    }
+ 
+    ul {
+        display: flex;
+      }
+    
+    ul.open {
+        display: flex;
+    }
+
+    ul li {
+        list-style: none;
+        padding-right: 25px;
+    }
+
+    ul li a {
+        display: block;
+        text-decoration: none;
+        color: $red;
+        padding: 0.5rem;
+        margin: 0 0.5rem;
+        border-radius: 0.5rem;
+        text-shadow: 5px 5px $green;
+      }
+
+      ul li a:not(.active):hover{
+        background: $green;
+      }
+
+    .menu {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 0.75rem;
+        right: 0.5rem;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 2.25rem;
+        height: 2rem;
+
+        span {
+            height: 0.3rem;
+            width: 100%;
+            background: white;
+            border-radius: 0.2rem;    
+        }
+    }
+  }
+      
+  @media (max-width: 480px) {
+    nav .menu {
+        display: flex;
+        top: 3rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        
+        ul {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 0.25rem;
+
+            li {
+                width: 100%;
+                text-align: center;
+
+                a {
+                    margin: 0.25rem 0.5rem;
+                }
+            }
+        }
+
+    }   
+}
+  
