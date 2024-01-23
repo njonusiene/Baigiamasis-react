@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
 const Product = ({ id, title, image, price, description }) => {
+  
   return (
     <motion.div
       key={id}
