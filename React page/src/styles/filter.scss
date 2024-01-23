@@ -1,0 +1,25 @@
+.filter-options {
+    padding: 45px 205px;
+    font-weight: 700;
+    font-size: 1.3em;
+
+    label {
+        padding: 3px;
+    }
+
+    select {
+        margin: 0px 10px;
+        padding-top: 5px;
+        font-family: $font;
+        font-size: 0.8em;
+    }
+
+    @media (max-width:768px) {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        padding-left: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+}
