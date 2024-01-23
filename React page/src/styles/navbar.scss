@@ -5,7 +5,7 @@ nav {
     background: linear-gradient($brown, $yellow, $brown);
     box-shadow: 0 5px 5px $green;
     border-radius: 5px;
-    font-size: 1.5em;
+    font-size: 1.2em;
     width: 100%; 
     
     .title {
@@ -18,16 +18,16 @@ nav {
         top: 0;
         font-family: $mainfont;
         color: $red;
-        text-shadow: 5px 5px $green;
-        padding-left: 25px;
+        text-shadow: 3px 5px $green;
+        padding-left: 35px;
 
         #icon {
-            font-size: 1,3em;
+            font-size: 1.3em; // Fixed the comma typo here
             transition: 0.5s;
 
             &:hover {
                 color: $brown;
-                transform: translatey(10px);
+                transform: translateY(10px); // Fixed the typo in translateY
                 cursor: pointer;
             }
         }
@@ -35,7 +35,7 @@ nav {
  
     ul {
         display: flex;
-      }
+    }
     
     ul.open {
         display: flex;
@@ -43,7 +43,7 @@ nav {
 
     ul li {
         list-style: none;
-        padding-right: 25px;
+        padding-right: 45px;
     }
 
     ul li a {
@@ -54,11 +54,11 @@ nav {
         margin: 0 0.5rem;
         border-radius: 0.5rem;
         text-shadow: 5px 5px $green;
-      }
+    }
 
-      ul li a:not(.active):hover{
+    ul li a:not(.active):hover {
         background: $green;
-      }
+    }
 
     .menu {
         display: none;
@@ -76,21 +76,16 @@ nav {
             width: 100%;
             background: white;
             border-radius: 0.2rem;    
+            margin-bottom: 0.5rem; // Added margin to prevent overlapping
         }
     }
-  }
-      
-  @media (max-width: 480px) {
-    nav .menu {
-        display: flex;
-        top: 3rem;
-    }
 
-    nav {
-        flex-direction: column;
-        align-items: start;
-        width: 100%;
-        
+    @media (max-width: 768px) {
+        .menu {
+            display: flex;
+            top: 3rem;
+        }
+
         ul {
             display: none;
             flex-direction: column;
@@ -106,7 +101,11 @@ nav {
                 }
             }
         }
+    }
 
-    }   
+    @media (max-width: 320px) {
+        .menu {
+            top: 3.5rem; // Adjusted the top position
+        }
+    } 
 }
-  
