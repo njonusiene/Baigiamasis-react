@@ -3,18 +3,20 @@
     flex-direction: row;
     width: 100%;
     min-height: 90vh;
-    padding-left: 45px;
-    background: $yellow;
+    padding-left: 145px;
+    // background: $yellow;
 }
 
 .photo img {
-    max-height: 615px;
+    margin-top: 4px;
+    max-height: 610px;
     opacity: 0.8;
+    box-shadow: 0 5px 5px $green;
 }
 
 article {
     padding: 10px 40px;
-    width: 60%;
+    width: 80%;
     font-family: $mainfont;
     color: $red;
     font-size: 1.2em;
@@ -59,13 +61,11 @@ i {
     font-size: 1em;
     padding-left: 15px;
     padding-right: 15px;
-    color: rgb(73, 72, 72);
 }
 
 input {
     border-radius: 10px;
     padding: 10px;
-    background: linear-gradient($yellow, $green);
     margin-right: 5px;
     margin-top: 10px;
     box-shadow: 5px 5px 5px gray;
@@ -79,10 +79,10 @@ input {
     &::placeholder {
         color: $red;
     }
-}
 
-input:hover {
-    background: $green;
+    &:hover {
+        background: $green;
+    }
 }
 
 .social {
@@ -96,30 +96,39 @@ input:hover {
         color: $red;
         font-size: 2em;
         padding-right: 25px;
+        
+        &:hover {
+            color: $green;
+        }
     }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .contactpage {
         flex-direction: column;
-        padding-left: 10px;
+        padding-left: 5px;
+        align-items: center;
     }
 
     article {
-        width: 100%;
+        display: none;
     }
 
     .contacts {
         padding: 10px 15px;
     }
+
+    .photo img {
+        height: 445px;
+    }
 }
 
-@media screen and (max-width: 320px) {
+@media (max-width: 320px) {
     input {
         font-size: 0.8em;
     }
 
     .photo img {
-        height: 410px;
+        height: 445px;
     }
 }

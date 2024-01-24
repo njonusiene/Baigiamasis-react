@@ -1,30 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { FaStar, FaCheckCircle, FaTrashAlt } from 'react-icons/fa';
+import Navbar from '../components/NavBar';
+import Bounce from 'react-reveal/Bounce';
 
 const Reviews = () => {
   const { productId } = useParams();
+  console.log('Product ID:', productId);
   const [reviews, setReviews] = useState([]);
   const [product, setProduct] = useState(null);
-
+  
   useEffect(() => {
-    // Fetch product details
-    fetch(`http://localhost:4012/reviews?productId=${productId}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setProduct(data);
-      })
-      .catch((error) => console.error('Error fetching product details:', error));
-
-    // Fetch reviews for the product
-    fetch(`http://localhost:4012/reviews?productId=${productId}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setReviews(data);
-      })
-      .catch((error) => console.error('Error fetching reviews:', error));
+    const fetchData = async () => {
+      try {
+        // Fetch product details using productId
+        const productResponse = await fetch(`http://localhost:4012/bouquet/${productId}`);
+        const productData = await productResponse.json();
+        setProduct(productData);
+  
+        // Fetch reviews using product_id
+        const reviewsResponse = await fetch(`http://localhost:4012/reviews?product_id=${productId}`);
+        const reviewsData = await reviewsResponse.json();
+        setReviews(reviewsData);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        // Handle the error gracefully, set product and reviews to empty or default values
+        setProduct(null);
+        setReviews([]);
+      }
+    };
+  
+    fetchData();
   }, [productId]);
-
   const handleDeleteReview = async (reviewId) => {
     try {
       // Delete the review using your API endpoint
@@ -40,9 +47,14 @@ const Reviews = () => {
   };
 
   return (
+    <div className='bouquets'>
+      <Bounce left>
+
+
+    <Navbar/>
     <div className="review-page">
       {product ? (
-        <h2>{product.title} reviews:</h2>
+        <h2> " {product.title} " reviews:</h2>
       ) : (
         <h2>Loading...</h2>
       )}
@@ -50,17 +62,6 @@ const Reviews = () => {
         <div className="review-cards-container">
           {reviews.map((review) => (
             <div key={review.id} className="review-card">
-              <div className="review-header">
-                <h3>
-                  {review.name} <FaCheckCircle className="checkmark-icon" />
-                </h3>
-                <div className="action-icons">
-                  <FaTrashAlt
-                    className="trash-icon"
-                    onClick={() => handleDeleteReview(review.id)}
-                  />
-                </div>
-              </div>
               <div className="rating">
                 <span className="rating-label">Rating:</span>
                 {[...Array(5)].map((_, index) => (
@@ -70,17 +71,35 @@ const Reviews = () => {
                   />
                 ))}
               </div>
-              <h4>{review.title}</h4>
+              <div className="review-header">
+                <h3>
+                  {review.name} 
+                </h3>
+              </div>
+                  <br />
               <p>{review.comment}</p>
+              <br />
+                <div className="action-icons">
+                  You do not like comment?
+                  <FaTrashAlt
+                    className="trash-icon"
+                    onClick={() => handleDeleteReview(review.id)} 
+                  />  
+                </div>
             </div>
           ))}
         </div>
       ) : (
         <p className="noReviews">No reviews available for this product.</p>
       )}
-      <Link to="/">
+      <Link to="/Bouquets">
         <button>Go Back</button>
       </Link>
+      <Link to="/Bouquets">
+        <button>Add Review</button>
+      </Link>
+    </div>
+      </Bounce>
     </div>
   );
 };

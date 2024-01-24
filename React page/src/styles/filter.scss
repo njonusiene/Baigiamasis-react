@@ -1,5 +1,5 @@
 .filter-options {
-    padding: 45px 40px;
+    padding: 45px 160px;
     font-weight: 700;
     font-size: 1em;
     color: $red;
@@ -9,23 +9,27 @@
 
     label {
         padding: 3px;
+  
     }
 
     select {
         margin: 0px 10px;
         padding-top: 5px;
         font-family: $font;
-        font-size: 0.7em;
-        color: $brown;
+        font-size: 0.8em;
+        color: $red;
         border: 1px solid $brown;
+        min-width: 120px;
     }
 
-    @media (max-width:480px) {
+    @media (max-width:850px) {
         display: flex;
         flex-direction: column;
-        margin: 20px;
-        padding-left: 50px;
         align-items: center;
         justify-content: center;
+        font-size: 0.7em;
+    }
+    .filter-options {
+        width: 320px;
     }
 }

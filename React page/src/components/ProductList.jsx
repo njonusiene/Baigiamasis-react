@@ -16,7 +16,7 @@ const ProductList = ({ listData, onDelete }) => {
           exit={{ opacity: 0, scale: 0.5 }}
           transition={{ ease: 'easeInOut', duration: 0.8 }}
         >
-          Apgailestaujame, tačiau duomenų bazėje nėra produktų.
+          There are no bouqets available at the moment.
         </motion.p>
       )}
     </div>

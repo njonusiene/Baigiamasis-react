@@ -4,7 +4,7 @@ const Filter = ({ onCategoryChange, onPriceChange, categoryFilter, priceFilter }
   return (
     <div className="filter-options">
       <label>
-        Filter by category: 
+        Filter by color: 
         <select value={categoryFilter} onChange={(e) => onCategoryChange(e.target.value)}>
             <option value="all">all</option>
             <option value="mix">Mix</option>

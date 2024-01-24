@@ -2,7 +2,7 @@ import React from "react"
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
-const Product = ({ id, title, image, price, description }) => {
+const Product = ({ id, title, category, image, price, description }) => {
   
   return (
     <motion.div
@@ -13,14 +13,15 @@ const Product = ({ id, title, image, price, description }) => {
       transition={{ ease: 'easeInOut', duration: 0.8 }}
       className="input"
     >
-      <img src={image} alt="bouquet" />
+      <img src={image} alt={title} />
       <br />
       <h2>{title}</h2>
+      {/* <h5>Category: {category}</h5> */}
+      <h4>Price: {price} €</h4>
       <br />
-      <h4>{price} €</h4>
       <p>{description}</p>
       <div className="buttons">
-        <Link to={`/reviews/${id}`}>Show Reviews</Link>
+      <Link to={`/reviews/${id}`}>Show Reviews</Link>
       </div>
     </motion.div>
   )

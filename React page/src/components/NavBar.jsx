@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 import { GiSpotedFlower } from "react-icons/gi";
 
 
+
 const Navbar = () => {
 
     const [menuOpen, setMenuOpen] = useState(false)
@@ -16,7 +17,7 @@ const Navbar = () => {
             <span></span>
             <span></span>
             <span></span>
-            <span></span>
+            
         </div>
         <ul className={menuOpen ? "open" : ""}>
             <li>
