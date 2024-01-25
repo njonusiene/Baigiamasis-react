@@ -8,8 +8,8 @@
 }
 
 .photo img {
-    margin-top: 4px;
-    max-height: 610px;
+    margin-top: 10px;
+    max-height: 570px;
     opacity: 0.8;
     box-shadow: 0 5px 5px $green;
 }
@@ -33,7 +33,7 @@ article {
 }
 
 .contacts {
-    padding: 10px 40px;
+    padding: 5px 40px;
     display: flex;
     flex-direction: column;
 
@@ -119,6 +119,7 @@ input {
     }
 
     .photo img {
+        margin-top: 10px;
         height: 445px;
     }
 }
@@ -129,6 +130,6 @@ input {
     }
 
     .photo img {
-        height: 445px;
+        height: 425px;
     }
 }

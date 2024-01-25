@@ -10,3 +10,26 @@
     display: flex;
     flex-direction: column;
 }
+
+:root {
+    --background-color-light: #fff;
+    --text-color-light: #333;
+    --background-color-dark: #333;
+    --text-color-dark: #fff;
+  }
+  
+  .light-mode {
+    --background-color: var(--background-color-light);
+    --text-color: var(--text-color-light);
+  }
+  
+  .dark-mode {
+    --background-color: var(--background-color-dark);
+    --text-color: var(--text-color-dark);
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  

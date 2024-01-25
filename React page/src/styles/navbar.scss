@@ -1,3 +1,19 @@
+.toggle {
+    color: $red;
+    border: none;
+    background: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 100px;
+    position: fixed;   
+    z-index: 2; /* Set a higher z-index value */
+
+    @media (max-width: 768px){
+        margin-left: 10px;
+        font-size: 0.6em;
+    }
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -7,6 +23,8 @@ nav {
     border-radius: 5px;
     font-size: 1.2em;
     width: 100%; 
+    position: relative; /* Make sure the element is positioned */
+    z-index: 1; /* Set a lower z-index value compared to the button */
     
     .title {
         font-size: 1.5em;
@@ -92,6 +110,7 @@ nav {
     
         .title {
             padding-left: 0.5rem;
+            margin-left: 45px;
             font-size: 0.7em;
             width: 70%;
             // display: none; /* Pridėta, kad pavadinimas nebūtų rodomas */
@@ -107,7 +126,7 @@ nav {
             li {
                 text-align: center;
                 padding-right: 50px;
-                font-size: 0.7em;
+                font-size: 0.6em;
     
                 a {
                     margin: 0.15rem 0.2rem;
@@ -122,7 +141,7 @@ nav {
         .menu {
             position: absolute;
             right: 0.5rem;
-            top: 0.75rem;
+            top: 0.8rem;
         }
     
     }}

@@ -21,7 +21,6 @@ const Contact = () => {
         email: email,
       },
     }
-
     try {
       const response = await fetch(
         'https://api.apispreadsheets.com/data/k1oV66P5rpkqtqmL/',
@@ -32,9 +31,8 @@ const Contact = () => {
           },
           body: JSON.stringify(newData),
         }
-      )
-
-      if (response.status === 201) {
+      ) 
+    if (response.status === 201) {
         alert('Thank You! I will get in touch as soon as posible 🌼')
         setEmail('');
       } else {
@@ -44,7 +42,8 @@ const Contact = () => {
       console.error('Error:', error);
       alert('An error occurred while submitting the form.');
     }
-  };
+  }
+  
   return (
     <>
       <motion.div
@@ -61,34 +60,22 @@ const Contact = () => {
         <div className="split">
           <article>
             <br />
-                
               We are proud to present our wonderful goods. Here you can find many wonderful examples because our collection is one of the biggest among flower stores. We know how to satisfy our clients because we have one similar passion – flowers.
               <br /><br />
-             
               - <GiSpotedFlower/> Kindly Our team <GiSpotedFlower /> -
               <br /> <br />
-              <hr/> 
-             
+              <hr/>
           </article>
           <div className='contacts'>
             <ul>
-              <li>
-                <b>Call us:</b>
-              </li>
-              <li>
-              <MdOutlineLocalPhone /> 370 666 66666
-              </li>
+              <li><b>Call us:</b></li>
+              <li><MdOutlineLocalPhone /> 370 666 66666</li>
               <br />
-              <li>
-                <b>Write us:</b>
-              </li>
-              <li>
-              <MdEmail /> flower@store.com
-              </li>
+              <li><b>Write us:</b></li>
+              <li><MdEmail /> flower@store.com</li>
             </ul>
             <br />
             <h2>If you want to get Newsletter:</h2>
-     
             <form onSubmit={handleSubmit}>
               <input
                 type="email"

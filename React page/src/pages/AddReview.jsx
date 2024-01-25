@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion';
 
+
 const AddReview = () => {
     const {productId} = useParams()
     const [name, setName] = useState("")
@@ -14,7 +15,7 @@ const AddReview = () => {
     const navigate = useNavigate()
 
     const generateRandomId = () => {
-        return Math.floor(Math.random() * 1000000);
+        return uuidv4();
       };
 
     const fetchNameData = async () => {
@@ -42,12 +43,11 @@ const AddReview = () => {
 
         try {
             const logData = {
-              id: generateRandomId(),
-              product_id: productId,
               name,
               rating,
               title,
               comment,
+              product_id: productId,
             };
 
             if(!name || !rating || !title || !comment) return alert("Please fill all flields");
