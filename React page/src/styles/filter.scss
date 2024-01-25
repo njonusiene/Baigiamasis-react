@@ -1,15 +1,33 @@
 .filter-options {
+    display: flex;
     padding: 45px 160px;
     font-weight: 700;
     font-size: 1em;
     color: $red;
-    width: 100%;
+
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
     label {
         padding: 3px;
-  
+    }
+
+    a {
+        color: $red;
+        text-decoration: none;
+
+        background: $green;
+        padding: 10px 20px;
+        border-radius: 5px;
+        box-shadow: 0 5px 5px $brown;
+        font-family: $mainfont;
+        transition: 0.3s;
+
+            &:hover{
+                font-size: 1.1em;
+                opacity: 0.8;
+                cursor: pointer;
+            }
     }
 
     select {
@@ -24,12 +42,24 @@
 
     @media (max-width:850px) {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
+        padding: 0;
         font-size: 0.7em;
     }
     .filter-options {
         width: 320px;
     }
+
+    label {
+        padding: 10px;
+    }
+
+    a {
+        width: 150px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+  
 }

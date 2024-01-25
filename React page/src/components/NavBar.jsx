@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { GiSpotedFlower } from "react-icons/gi";
-
-
+import { GiSpotedFlower, GiFlowerPot } from "react-icons/gi"
+import { IoMdContacts } from "react-icons/io";
 
 const Navbar = () => {
 
@@ -17,15 +16,10 @@ const Navbar = () => {
             <span></span>
             <span></span>
             <span></span>
-            
         </div>
         <ul className={menuOpen ? "open" : ""}>
-            <li>
-                <NavLink to="/Bouquets" >Bouquets</NavLink> </li>
-            <li>
-                <NavLink to="/Create" >Create</NavLink> </li>
-            <li>
-                <NavLink to="/Contact" >Contact</NavLink> </li>
+            <li><NavLink to="/Bouquets" >Flowers <GiFlowerPot /></NavLink> </li>
+            <li><NavLink to="/Contact" >Contacts <IoMdContacts /></NavLink> </li>
         </ul>
     </nav>
   )

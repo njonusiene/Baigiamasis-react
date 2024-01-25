@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 
 import './styles/style.scss'
+import AddReview from "./pages/AddReview";
 
 export default function App() {
  
@@ -17,6 +18,7 @@ export default function App() {
             <Route path="/" element={<Home/>}/>
             <Route path="/Bouquets" element={<Bouquets/>}/>
             <Route path="/reviews/:productId" element={<Reviews />} />
+            <Route path="/reviews/:productId/new-review" element={<AddReview />} />
             <Route path="/Create" element={<Create/>}/>
             <Route path="/Contact" element={<Contact/>}/>
           </Routes>

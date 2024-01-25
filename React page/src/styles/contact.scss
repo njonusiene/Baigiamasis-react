@@ -51,7 +51,7 @@ article {
         transition: color .4s ease-in-out, box-shadow .3s ease-in-out;
 
         &:hover {
-            box-shadow: inset 260px 0 0 0 $green;
+            box-shadow: inset 260px 0 0 0 $lightgreen;
             color: rgb(73, 72, 72);
         }
     }

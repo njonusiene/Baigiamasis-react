@@ -3,7 +3,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     background: transparent;
-    box-shadow: 0 5px 5px $green;
+    box-shadow: 0 3px 3px $green;
     border-radius: 5px;
     font-size: 1.2em;
     width: 100%; 
@@ -62,7 +62,7 @@ nav {
     }
 
     ul li a:not(.active):hover {
-        background: $green;
+        background: $lightgreen;
     }
 
     .menu {
