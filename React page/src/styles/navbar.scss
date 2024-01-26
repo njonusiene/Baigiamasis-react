@@ -1,7 +1,7 @@
 .toggle {
     color: $red;
     border: none;
-    background: white;
+    background: #fff;
     border-radius: 5px;
     margin-top: 10px;
     margin-left: 100px;
@@ -18,13 +18,13 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: transparent;
+    background: #fff;
     box-shadow: 0 3px 3px $green;
     border-radius: 5px;
     font-size: 1.2em;
     width: 100%; 
-    position: relative; /* Make sure the element is positioned */
-    z-index: 1; /* Set a lower z-index value compared to the button */
+    position: fixed; 
+    z-index: 1; 
     
     .title {
         font-size: 1.5em;

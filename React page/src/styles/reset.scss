@@ -5,6 +5,20 @@
     font-family: $font;
 }
 
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    position: relative;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  // overflow: hidden;
+}
 #root {
     min-height: 100vh;
     display: flex;
@@ -16,6 +30,8 @@
     --text-color-light: #333;
     --background-color-dark: #333;
     --text-color-dark: #fff;
+    --background-color: #fff; // Pridėtas kintamasis
+    --text-color: #333; // Pridėtas kintamasis
   }
   
   .light-mode {
@@ -26,10 +42,5 @@
   .dark-mode {
     --background-color: var(--background-color-dark);
     --text-color: var(--text-color-dark);
-  }
-  
-  body {
-    background-color: var(--background-color);
-    color: var(--text-color);
   }
   

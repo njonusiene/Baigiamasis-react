@@ -24,7 +24,7 @@ const Filter = ({ onCategoryChange, onPriceChange, categoryFilter, priceFilter }
           <option value="highest"> ↑ High - Low</option>
         </select>
       </label>
-      <Link to="/">+ Create New</Link>
+      {/* <Link to="/">+ Create New</Link> */}
     </div>
   );
 };

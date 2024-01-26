@@ -1,12 +1,11 @@
 .filter-options {
+    // width: 1200px;
     display: flex;
-    padding: 45px 160px;
+    padding-top: 95px ;
     font-weight: 700;
     font-size: 1em;
     color: $red;
-
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
     label {
         padding: 3px;
