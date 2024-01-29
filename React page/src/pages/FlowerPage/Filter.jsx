@@ -19,7 +19,7 @@ const Filter = ({ onCategoryChange, onPriceChange }) => {
       setPriceFilter(storedPriceFilter);
       onPriceChange(storedPriceFilter);
     }
-  }, []); // Tinkamai pritaikykite atsižvelgiant į jūsų poreikius
+  }, []); 
 
   const handleCategoryChange = (value) => {
     setCategoryFilter(value);
