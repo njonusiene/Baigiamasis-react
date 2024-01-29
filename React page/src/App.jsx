@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Reviews from './pages/Reviews';
-import Bouquets from './pages/Bouquets';
+import Reviews from './pages/ReviewPage/Reviews';
+import Flowers from './pages/FlowerPage/Flowers';
 import Contact from './pages/Contact';
-import Home from './pages/Home';
-import AddReview from './pages/AddReview';
+import Home from './pages/HomePage/Home';
+import AddReview from './pages/ReviewPage/AddReview';
+import Page404 from './pages/Page404';
 import { CiLight } from "react-icons/ci";
 import { MdDarkMode } from "react-icons/md";
 
 import './styles/style.scss';
+import AddFlower from './pages/FlowerPage/AddFlower';
+
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -36,10 +39,12 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Bouquets" element={<Bouquets />} />
+          <Route path="/Flowers" element={<Flowers />} />
+          <Route path="/Flowers/addflower" element={<AddFlower />} />
           <Route path="/reviews/:productId" element={<Reviews />} />
           <Route path="/reviews/:productId/new-review" element={<AddReview />} />
           <Route path="/Contact" element={<Contact />} />
+          <Route path="/*" element={<Page404/>}/>
         </Routes>
       </Router>
     </div>

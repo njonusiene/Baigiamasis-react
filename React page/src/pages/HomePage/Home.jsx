@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import Header from '../components/Header';
-import Loading from '../components/Loading';
+import React, { useEffect, useState } from 'react'
+import HomeLanding from './HomeLanding'
+import Loading from '../../components/Loading'
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -17,16 +17,13 @@ const Home = () => {
 
   return (
     <>
-      {isLoading ? (
-        <Loading /> // Display loading indicator while content is loading
-      ) : (
+      {isLoading ? ( <Loading /> ) : (
         <div>
-
-          <Header />
+          <HomeLanding/>
         </div>
       )}
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { FaTrashAlt } from 'react-icons/fa';
-import Navbar from '../components/NavBar';
+import Navbar from '../../components/NavBar';
 import { GiPeaceDove } from "react-icons/gi";
 import { GiSpotedFlower } from "react-icons/gi";
 
@@ -63,7 +63,7 @@ const handleDeleteReview = async (reviewId) => {
       <Navbar/>
       <div className="review-page">
         {product ? (<h2> " {product.title} " reviews:</h2>) : (<h2>Loading...</h2>)}
-        <Link to="/Bouquets"> Go Back </Link>
+        <Link to="/Flowers"> Go Back </Link>
         <Link to={ `/reviews/${productId}/new-review`}> Add Review </Link>
         {reviews.length > 0 ? (
           <div className="review-cards-container">

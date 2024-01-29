@@ -1,8 +1,7 @@
-import React from "react";
-import Product from "./Product";
 import { motion } from 'framer-motion';
+import Product from "./Product";
 
-const ProductList = ({ listData, onDelete }) => {
+const FlowerList = ({ listData, onDelete }) => {
   return (
     <div className="inputs">
       {listData.length > 0 ? (
@@ -23,4 +22,4 @@ const ProductList = ({ listData, onDelete }) => {
   );
 };
 
-export default ProductList;
+export default FlowerList;

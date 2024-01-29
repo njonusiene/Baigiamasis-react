@@ -96,6 +96,20 @@ footer
         box-shadow: 0 5px 5px $green;
     }
 
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 255px;
+        color: $red;
+        text-decoration: none;
+        background: $green;
+        padding: 10px 45px;
+        border-radius: 5px;
+        box-shadow: 0 5px 5px $brown;
+        font-family: $mainfont;
+        transition: 0.3s;
+    }
 }
 
 .wrapper-parallax {

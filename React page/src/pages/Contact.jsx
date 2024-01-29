@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Navbar from "../components/NavBar";
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 import { GiSpotedFlower } from "react-icons/gi";
 import { MdEmail, MdOutlineLocalPhone } from "react-icons/md";
 import { FaFacebook, FaInstagramSquare, FaPinterestSquare  } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import Navbar from "../components/NavBar";
 
 const Contact = () => {
   const [email, setEmail] = useState('')
@@ -55,7 +55,7 @@ const Contact = () => {
       <Navbar/>
       <div className="contactpage">
         <div className="photo">
-            <img src="https://images.unsplash.com/photo-1516827096346-bfb65d850f70?q=80&w=1903&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="flower" />
+            <img src="./src/assets/sunflower.jpg" alt="flower" />
         </div>
         <div className="split">
           <article>

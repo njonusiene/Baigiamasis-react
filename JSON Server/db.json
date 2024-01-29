@@ -148,12 +148,12 @@
       "product_id": 4
     },
     {
-      "id": "8",
+      "id": "111",
       "name": "Bob Johnson",
       "rating": 5,
       "title": "Excellent Service",
       "comment": "The delivery was quick, and the flowers exceeded my expectations.",
-      "product_id": 4
+      "product_id": 2
     },
     {
       "id": "9",
@@ -316,114 +316,6 @@
       "product_id": 14
     },
     {
-      "comment": "Grazus\n",
-      "id": "601161"
-    },
-    {
-      "name": "Petras Petraitis11",
-      "rating": 0,
-      "title": "",
-      "comment": "",
-      "id": "878275"
-    },
-    {
-      "name": "Jonas",
-      "rating": 0,
-      "title": "",
-      "comment": "",
-      "id": "252302"
-    },
-    {
-      "name": "Petras",
-      "rating": 0,
-      "title": "",
-      "comment": "",
-      "id": "839336"
-    },
-    {
-      "name": "Jonas",
-      "rating": 0,
-      "title": "",
-      "comment": "",
-      "id": "490a"
-    },
-    {
-      "name": "Jonas",
-      "rating": 0,
-      "title": "",
-      "comment": "",
-      "id": "1165"
-    },
-    {
-      "name": "Jonas",
-      "rating": 0,
-      "title": "",
-      "comment": "",
-      "id": "83de"
-    },
-    {
-      "name": "Jonas",
-      "rating": 0,
-      "title": "",
-      "comment": "",
-      "id": "7aa6"
-    },
-    {
-      "name": "Jonas",
-      "rating": 0,
-      "title": "",
-      "comment": "",
-      "id": "86ac"
-    },
-    {
-      "name": "Jonas",
-      "rating": "1",
-      "title": "s",
-      "comment": "asas",
-      "id": "874f"
-    },
-    {
-      "name": "Jonas",
-      "rating": "3",
-      "title": "asdasf",
-      "comment": "asdasfasf",
-      "id": "9392"
-    },
-    {
-      "name": "Jonas",
-      "rating": 0,
-      "title": "",
-      "comment": "",
-      "id": "348e"
-    },
-    {
-      "name": "Petras Petraitis",
-      "rating": 0,
-      "title": "",
-      "comment": "",
-      "id": "5b12"
-    },
-    {
-      "comment": "Labai grazi gele",
-      "id": "7913"
-    },
-    {
-      "comment": "Grazi gele",
-      "id": "fe2f"
-    },
-    {
-      "comment": "wwww",
-      "id": "0a34"
-    },
-    {
-      "comment": "1",
-      "id": "8897"
-    },
-    {
-      "comment": "Grazus\n",
-      "id": "58d3"
-    },
-    {
       "id": "076a",
       "name": "Rami Malek",
       "rating": "1",
@@ -438,6 +330,14 @@
       "title": "Beatiful",
       "comment": "Nice color, but leak of smell.",
       "product_id": "1"
+    },
+    {
+      "id": "721a",
+      "name": "Richard Geer",
+      "rating": "4",
+      "title": "Nice flowers",
+      "comment": "Thank You for a lovely flower bouquets, my wife was very happy.",
+      "product_id": "3"
     }
   ]
 }

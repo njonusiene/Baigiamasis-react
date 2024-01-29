@@ -10,7 +10,6 @@ const Filter = ({ onCategoryChange, onPriceChange, categoryFilter, priceFilter }
             <option value="all">all</option>
             <option value="mix">🌈Mix</option>
             <option value="white">⚪White</option>
-            <option value="Purple">🟣Purple</option>
             <option value="yellow">🟡Yellow</option>
             <option value="red">🔴Red</option>
             <option value="pink">🌸Pink</option>
@@ -24,9 +23,9 @@ const Filter = ({ onCategoryChange, onPriceChange, categoryFilter, priceFilter }
           <option value="highest"> ↑ High - Low</option>
         </select>
       </label>
-      {/* <Link to="/">+ Create New</Link> */}
+      <Link to="/Flowers/addflower">+ Create New</Link>
     </div>
-  );
-};
+  )
+}
 
-export default Filter;
+export default Filter

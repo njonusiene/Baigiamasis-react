@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Filter from "../components/Filter";
-import ProductList from "../components/ProductList";
-import Navbar from "../components/NavBar";
+import Filter from "./Filter";
+import FlowerList from "./FlowerList";
+import Navbar from "../../components/NavBar";
 
-const Bouquets = () => {
+const Flowers = () => {
   const [listData, setListData] = useState([]);
   const [categoryFilter, setCategoryFilter] = useState("all")
   const [priceFilter, setPriceFilter] = useState("all")
@@ -15,35 +15,36 @@ const Bouquets = () => {
 
   const fetchData = async () => {
     try {
-      let url = 'http://localhost:4012/bouquet';
+      let url = 'http://localhost:4012/bouquet'
   
       if (categoryFilter !== "all") {
-        url += `?category=${categoryFilter}`;
+        url += `?category=${categoryFilter}`
       }
   
-      const resp = await fetch(url);
-  
+      const resp = await fetch(url)
+      
       if (resp.ok) {
-        const json = await resp.json();
+        const json = await resp.json()
   
-        let filteredData = json;
+        let filteredData = json
   
         if (priceFilter === "lowest") {
-          filteredData = filteredData.sort((a, b) => a.price - b.price);
+          filteredData = filteredData.sort((a, b) => a.price - b.price)
         } else if (priceFilter === "highest") {
-          filteredData = filteredData.sort((a, b) => b.price - a.price);
+          filteredData = filteredData.sort((a, b) => b.price - a.price)
         }
   
-        setListData(filteredData);
+        setListData(filteredData)
       } else {
-        console.error('Failed to fetch data from API');
-        setListData([]);
+        console.error('Nepavyko gauti duomenų iš API')
+        setListData([]); // Nustatome tusčią masyvą, jei duomenys nebuvo gauti
       }
     } catch (error) {
-      console.error('Error fetching data:', error);
-      setListData([]);
+      console.error('Įvyko klaida:', error)
+      setListData([]); // Nustatome tusčią masyvą klaidos atveju
     }
-  };
+  }
+  
 
   return (
     <>
@@ -53,8 +54,6 @@ const Bouquets = () => {
         exit={{ opacity: 0, scale: 0 }}
         transition={{ ease: 'easeInOut', duration: 0.8 }}
       >
-        <div className="bouquets">
-
         <Navbar/>
         <Filter
           onCategoryChange={(value) => setCategoryFilter(value)}
@@ -62,11 +61,10 @@ const Bouquets = () => {
           categoryFilter={categoryFilter}
           priceFilter={priceFilter}
         />
-        <ProductList listData={listData} />
-        </div>
+        <FlowerList listData={listData} />
       </motion.div>
     </>
   )
 }
 
-export default Bouquets
+export default Flowers

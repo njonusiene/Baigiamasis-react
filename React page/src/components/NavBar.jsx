@@ -18,7 +18,7 @@ const Navbar = () => {
             <span></span>
         </div>
         <ul className={menuOpen ? "open" : ""}>
-            <li><NavLink to="/Bouquets" >Flowers <GiFlowerPot /></NavLink> </li>
+            <li><NavLink to="/Flowers" >Flowers <GiFlowerPot /></NavLink> </li>
             <li><NavLink to="/Contact" >Contacts <IoMdContacts /></NavLink> </li>
         </ul>
     </nav>
