@@ -14,24 +14,21 @@ const AddReview = () => {
     const API = "http://localhost:4012/reviews"
     const navigate = useNavigate()
 
-    const generateRandomId = () => {
-        return uuidv4();
-      };
-
     const fetchNameData = async () => {
-      const resp = await fetch("http://localhost:4012/reviews" + productId)
-      const json = await resp.json()
-      setProduct(json)
+      const resp = await fetch(`http://localhost:4012/reviews/${productId}`);
+      const json = await resp.json();
+      setProduct(json);
     }
+    
   
     useEffect(() => {
       fetchNameData()
     }, [])
 
     const fetchProductData = async () => {
-        const resp = await fetch(`http://localhost:4012/products/${productId}`);
-        const json = await resp.json();
-        setProduct(json);
+      const resp = await fetch(`http://localhost:4012/reviews/${productId}`);
+      const json = await resp.json();
+      setProduct(json);
       };
       
       useEffect(() => {

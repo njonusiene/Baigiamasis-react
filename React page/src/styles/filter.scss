@@ -1,6 +1,6 @@
 .filter-options {
     display: flex;
-    margin-left: 155px;
+    margin-left: 25px;
     padding-top: 95px ;
     font-weight: 700;
     font-size: 1em;
@@ -23,8 +23,7 @@
         transition: 0.3s;
 
             &:hover{
-                font-size: 1.1em;
-                opacity: 0.8;
+                background: $lightgreen;
                 cursor: pointer;
             }
     }
@@ -43,13 +42,12 @@
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        justify-content: center;
-        padding: 0;
+        justify-content: space-evenly;
+        padding-top: 50px;
         font-size: 0.7em;
-        .filter-options {
-            width: 320px;
-        }
-        
+        width: 320px;
+        margin-left: 10px;          
+     
         label {
             padding: 10px;
         }
@@ -58,7 +56,6 @@
             width: 150px;
             margin-bottom: 20px;
             margin-top: 20px;
-            margin-left: 35px;
         }
     }
   
