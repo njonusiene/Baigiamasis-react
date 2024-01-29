@@ -6,9 +6,9 @@
     margin-top: 10px;
     margin-left: 100px;
     position: fixed;   
-    z-index: 2; /* Set a higher z-index value */
+    z-index: 2;
 
-    @media (max-width: 768px){
+    @media (max-width: 930px){
         margin-left: 10px;
         font-size: 0.6em;
     }
@@ -102,7 +102,7 @@ nav {
         }
     }
     
-    @media (max-width: 768px) {
+    @media (max-width: 930px) {
         .menu {
             display: flex;
             top: 3rem;
@@ -113,12 +113,10 @@ nav {
             margin-left: 45px;
             font-size: 0.7em;
             width: 70%;
-            // display: none; /* Pridėta, kad pavadinimas nebūtų rodomas */
         }
     
         ul {
             display: none; /* Pridėta, kad iš pradžių būtų paslėptas meniu */
-    
             flex-direction: column;
             width: 100%;
             margin-bottom: 0.25rem;
@@ -143,5 +141,5 @@ nav {
             right: 0.5rem;
             top: 0.8rem;
         }
-    
-    }}
+    }
+}

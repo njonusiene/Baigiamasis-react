@@ -14,6 +14,8 @@ import AddFlower from './pages/FlowerPage/AddFlower';
 
 
 const App = () => {
+
+  //Dark/light rėžimas
   const [isDarkMode, setIsDarkMode] = useState(() => {
     //Užkrovimas "mode" iš local storage
     const savedTheme = localStorage.getItem('isDarkMode')

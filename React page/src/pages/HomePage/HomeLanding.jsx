@@ -4,58 +4,78 @@ import HomeFooter from './HomeFooter';
 import HomeSection from './HomeSection';
 
 function HomeLanding() {
-  const [scroll, setScroll] = useState(0)
-  const [footerHeight, setFooterHeight] = useState(0)
+  const [scroll, setScroll] = useState(0);
+  const [footerHeight, setFooterHeight] = useState(0);
 
   const scrollFooter = () => {
-    if (scroll >= footerHeight) {
-      document.querySelector('footer').style.bottom = '0px'
-    } else {
-      document.querySelector('footer').style.bottom = `-${footerHeight}px`
+    const footer = document.querySelector('footer');
+    if (footer && scroll >= footerHeight) {
+      footer.style.bottom = '0px';
+    } else if (footer) {
+      footer.style.bottom = `-${footerHeight}px`;
     }
-  }
+  };
 
   useEffect(() => {
     console.log("useEffect is called");
     const windowHeight = window.innerHeight;
-    const heightDocument = windowHeight + document.querySelector('.content').offsetHeight + footerHeight - 20;
-    console.log("heightDocument:", heightDocument); // Pasitikrinimas ekrano aukscio su console.log
-    document.getElementById('scroll-animate').style.height = `${heightDocument}px`;
-    document.querySelector('header').style.height = `${windowHeight}px`;
-    document.querySelector('header').style.lineHeight = `${windowHeight}px`;
-    document.querySelector('.wrapper-parallax').style.marginTop = `${windowHeight}px`;
-  
+    const contentElement = document.querySelector('.content');
+
+    if (contentElement) {
+      const heightDocument = windowHeight + contentElement.offsetHeight + footerHeight - 20;
+      console.log("heightDocument:", heightDocument);
+      document.getElementById('scroll-animate').style.height = `${heightDocument}px`;
+    }
+
+    const header = document.querySelector('header');
+    if (header) {
+      header.style.height = `${windowHeight}px`;
+      header.style.lineHeight = `${windowHeight}px`;
+    }
+
+    const wrapperParallax = document.querySelector('.wrapper-parallax');
+    if (wrapperParallax) {
+      wrapperParallax.style.marginTop = `${windowHeight}px`;
+    }
+
     scrollFooter();
-  
+
     window.onscroll = () => {
       const newScroll = window.scrollY;
-      console.log("New Scroll Value:", newScroll); // Pasitikrinimas ekrano aukscio su console.log
+      console.log("New Scroll Value:", newScroll);
       document.getElementById('scroll-animate-main').style.top = `-${newScroll}px`;
-      document.querySelector('header').style.backgroundPositionY = `${50 - (newScroll * 100 / heightDocument)}%`;
+
+      if (header) {
+        header.style.backgroundPositionY = `${50 - (newScroll * 100 / heightDocument)}%`;
+      }
+
       setScroll(newScroll);
-    }
-  }, [footerHeight, scroll])
+    };
+  }, [footerHeight, scroll]);
 
   useEffect(() => {
-    setFooterHeight(document.querySelector('footer').offsetHeight)
-  }, [])
+    const footer = document.querySelector('footer');
+    if (footer) {
+      setFooterHeight(footer.offsetHeight);
+    }
+  }, []);
 
   return (
     <>
-    <Navbar/>
-    <div id="scroll-animate">
-      <div id="scroll-animate-main">
-        <div className="wrapper-parallax">
-          <header>
-            <h1>THE BIGGEST SELECTION OF FRESH FLOWERS!</h1>
-          </header>
-          <HomeSection/>
-          <HomeFooter/>
+      <Navbar/>
+      <div id="scroll-animate">
+        <div id="scroll-animate-main">
+          <div className="wrapper-parallax">
+            <header>
+              <h1>THE BIGGEST SELECTION OF FRESH FLOWERS!</h1>
+            </header>
+            <HomeSection/>
+            <HomeFooter/>
+          </div>
         </div>
       </div>
-    </div>
     </>
-  )
+  );
 }
 
-export default HomeLanding
+export default HomeLanding;
