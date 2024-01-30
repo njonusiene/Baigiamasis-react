@@ -1,24 +1,20 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: $font;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font;
 }
 
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+  position: relative;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
 }
 
-body{
-    background-color: var(--background-color);
-    color: var(--text-color);
-    position: relative;
-    align-content: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  // overflow: hidden;
-}
 #root {
     min-height: 100vh;
     display: flex;
@@ -30,8 +26,8 @@ body{
     --text-color-light: #333;
     --background-color-dark: #333;
     --text-color-dark: #fff;
-    --background-color: #fff; // Pridėtas kintamasis
-    --text-color: #333; // Pridėtas kintamasis
+    --background-color: #fff; 
+    --text-color: #333; 
   }
   
   .light-mode {

@@ -92,29 +92,25 @@ const AddReview = () => {
     >
         <h1>New Review</h1>
         <div className="content-wrapper">
-        <form onSubmit={handleSubmit}>
-        <label>Name Surname</label>
-        <input onChange={handleChange} type="text" name="name" placeholder='e.g. Jhony Bravo' autoComplete="off"/>
+          <form onSubmit={handleSubmit}>
+            <label>Name Surname</label>
+            <input onChange={handleChange} type="text" name="name" placeholder='e.g. Jhony Bravo' autoComplete="off"/>
 
-        <label>Rating</label>
-        <input onChange={handleChange} type="number" name="rating" placeholder="from 1-5" min="1" max="5" autoComplete="off"/>
+            <label>Rating</label>
+            <input onChange={handleChange} type="number" name="rating" placeholder="from 1-5" min="1" max="5" autoComplete="off"/>
 
-        <label>Title</label>
-        <input onChange={handleChange} type="text" name="title" placeholder='Comment title' autoComplete="off"/>
+            <label>Title</label>
+            <input onChange={handleChange} type="text" name="title" placeholder='Comment title' autoComplete="off"/>
 
-        <label>Your Comment</label>
-        <textarea onChange={handleChange} name="comment" placeholder="We love to hear Your comment..." autoComplete="off" ></textarea>
+            <label>Your Comment</label>
+            <textarea onChange={handleChange} name="comment" placeholder="We love to hear Your comment..." autoComplete="off" ></textarea>
 
-        <div className="buttons">
-        <button className="button">Add Review</button>
-        <Link to={"/reviews/" + productId} className="button outline">  Go back</Link>
-        </div>
-        </form>
-        <img
-        src="https://images.unsplash.com/photo-1516827096346-bfb65d850f70?q=80&w=1903&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="Flower"
-        className="flower-image"
-        />
+          <div className="buttons">
+            <button className="button">Add Review</button>
+            <Link to={"/reviews/" + productId} className="button outline">  Go back</Link>
+          </div>
+          </form>
+          <img src="https://images.unsplash.com/photo-1516827096346-bfb65d850f70?q=80&w=1903&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Flower" className="flower-image" />
         </div>
     </motion.div>
   )

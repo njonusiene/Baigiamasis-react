@@ -11,8 +11,7 @@ const Navbar = () => {
     <nav>
         <Link to="/" className='title'><GiSpotedFlower id='icon' /> Flower Store </Link>
         <div className="menu" onClick={() => {
-            setMenuOpen(!menuOpen)
-        }}>
+            setMenuOpen(!menuOpen)}}>
             <span></span>
             <span></span>
             <span></span>
