@@ -1,5 +1,5 @@
 {
-  "name": "react11",
+  "name": "react-dalis",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,15 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "framer-motion": "^10.18.0",
+    "framer-motion": "^11.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hook-form": "^7.49.3",
     "react-icons": "^5.0.1",
-    "react-reveal": "^1.2.2",
-    "react-router": "^6.21.2",
-    "react-router-dom": "^6.21.2",
-    "sass": "^1.69.7"
+    "react-router-dom": "^6.21.3",
+    "sass": "^1.70.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
@@ -28,6 +25,6 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
-    "vite": "^5.0.12"
+    "vite": "^5.0.8"
   }
 }
